@@ -1,4 +1,3 @@
-// this file belongs in the static folder of Wrapper: Offline 1.2.3.
 const sessions = require('../data/sessions');
 const fUtil = require('../fileUtil');
 const stuff = require('./info');
