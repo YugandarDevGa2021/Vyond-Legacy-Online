@@ -24,7 +24,7 @@ module.exports = function (req, res, url) {
 
 	var attrs, params, title;
 	switch (url.pathname) {
-		case '/go_full': {
+		case '/go_full/lvm': {
 			let presave = query.movieId && query.movieId.startsWith('m') ? query.movieId :
 				`m-${fUtil[query.noAutosave ? 'getNextFileId' : 'fillNextFileId']('movie-', '.xml')}`;
 			title = 'The Video Maker from Vyond - Make a Video for YouTube!';
@@ -58,7 +58,9 @@ module.exports = function (req, res, url) {
 	res.setHeader('Content-Type', 'text/html; charset=UTF-8');
 	Object.assign(params.flashvars, query);
 	res.end(
-	`<html><head>
+	`<!-- this is the code to get the old preview window back. (inspect element required)
+	<div id="playerdiv" align="center" style="width:620px;height:349px;"><object data="${params.flashvars.animationPath}player.swf" type="application/x-shockwave-flash" id="Player" width="640" height="360"><param name="bgcolor" value="#000000"><param name="scale" value="exactfit"><param name="allowScriptAccess" value="always"><param name="allowFullScreen" value="true"><param name="wmode" value="opaque"><param name="flashvars" value="apiserver=%2F&amp;storePath=${params.flashvars.storePath}&amp;ut=60&amp;autostart=0&amp;isWide=1&amp;clientThemePath=${params.flashvars.clientThemePath}&amp;movieId=${params.flashvars.presaveId}"><param name="movie" value="${params.flashvars.animationPath}player.swf"></object></div>
+--><html><head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <link rel="dns-prefetch" href="https://josephcrosmanplays532.github.io">
@@ -197,7 +199,7 @@ function voiceBanner(bannerId) {
     <div id="previewPlayerContainer" style="display: none;">
         <div class="preview-player" id="previewPlayer">
             <h2>Preview Video</h2>
-           <div id="playerdiv" align="center" style="width:620px;height:349px;"><object data="https://localhost:4664/animation/414827163ad4eb60/player.swf" type="application/x-shockwave-flash" id="Player" width="620" height="349"><param name="bgcolor" value="#000000"><param name="scale" value="exactfit"><param name="allowScriptAccess" value="always"><param name="allowFullScreen" value="true"><param name="wmode" value="opaque"><param name="flashvars" value="apiserver=%2F&amp;storePath=https%3A%2F%2Flocalhost%3A4664%2Fstore%2F3a981f5cb2739137%2F%3Cstore%3E&amp;ut=60&amp;autostart=0&amp;isWide=1&amp;clientThemePath=https%3A%2F%2Flocalhost%3A4664%2Fstatic%2Fad44370a650793d9%2F%3Cclient_theme%3E&amp;movieId=m-"><param name="movie" value="https://localhost:4664/animation/414827163ad4eb60/player.swf"></object></div>
+           <div id="playerdiv"></div>
             <div id="h5-playerdiv">
                 <video class="hidden" id="h5-preview-player" width="100%" height="100%"></video>
                 <div class="player-overlay loading">
@@ -274,7 +276,7 @@ function voiceBanner(bannerId) {
         var enable_full_screen = true;
         var studio_data = {
             id: "Studio",
-            swf: "https://localhost:4664/animation/414827163ad4eb60/go_full.swf",
+            swf: "${params.flashvars.animationPath}go_full.swf",
             width: "100%",
             height: "100%",
             align: "middle",
@@ -522,22 +524,7 @@ function loadLegacyPreview() {
     }
     pauseH5PreviewPlayer();
     savePreviewData(movieDataXmlStr);
-    createPreviewPlayer("playerdiv", {
-        height: 360,
-        width: 640,
-        player_url: "https://localhost:4664/animation/414827163ad4eb60/player.swf",
-        quality: "medium"
-    }, {
-        movieOwner: "", movieOwnerId: "", movieId: "", ut: "-1",
-        movieLid: "8", movieTitle: "", movieDesc: "", userId: "", username: "", uemail: "",
-        apiserver: "/", thumbnailURL: "", copyable: "0", isPublished: "0", ctc: "go", tlang: "en_US", is_private_shared: "0",
-        autostart: "1", appCode: "go", is_slideshow: "0", originalId: "0", is_emessage: "0", isEmbed: "0", refuser: "",
-        utm_source: "", uid: "", isTemplate: "1", showButtons: "0", chain_mids: "", showshare: "0", averageRating: "",
-                    s3base: "https://s3.amazonaws.com/fs.goanimate.com/,https://assets.vyond.com/",
-                ratingCount: "", fb_app_url: "/", numContact: 0, isInitFromExternal: 1, storePath: "https://localhost:4664/store/3a981f5cb2739137/<store>", clientThemePath: "https://localhost:4664/static/ad44370a650793d9/<client_theme>", animationPath: "https://localhost:4664/animation/414827163ad4eb60/",
-        startFrame: previewStartFrame
-    });
-    $('#previewPlayer').removeClass('using-h5');
+    document.getElementById('playerdiv').innerHTML = '<object data="${params.flashvars.animationPath}player.swf" type="application/x-shockwave-flash" id="Player" width="640" height="360"><param name="bgcolor" value="#000000"><param name="scale" value="exactfit"><param name="allowScriptAccess" value="always"><param name="allowFullScreen" value="true"><param name="wmode" value="opaque"><param name="flashvars" value="apiserver=%2F&amp;storePath=${params.flashvars.storePath}&amp;ut=60&amp;autostart=0&amp;isWide=1&amp;clientThemePath=${params.flashvars.clientThemePath}&amp;movieId=${params.flashvars.presaveId}"><param name="movie" value="${params.flashvars.animationPath}player.swf"></object>';
 }
 function initPreviewPlayer(dataXmlStr, startFrame, containsChapter, themeList) {
     movieDataXmlStr = dataXmlStr;
