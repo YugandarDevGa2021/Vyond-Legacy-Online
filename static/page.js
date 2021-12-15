@@ -198,7 +198,7 @@ function voiceBanner(bannerId) {
     <div id="previewPlayerContainer" style="display: none;">
         <div class="preview-player" id="previewPlayer">
             <h2>Preview Video</h2>
-           <div id="playerdiv"></div>
+           <div id="playerdiv" align="center" style="width:620px;height:349px;"></div>
             <div id="h5-playerdiv">
                 <video class="hidden" id="h5-preview-player" width="100%" height="100%"></video>
                 <div class="player-overlay loading">
