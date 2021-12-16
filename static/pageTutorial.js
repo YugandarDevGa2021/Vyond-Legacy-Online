@@ -1,4 +1,4 @@
-onst sessions = require('../data/sessions');
+const sessions = require('../data/sessions');
 const fUtil = require('../fileUtil');
 const stuff = require('./info');
 
