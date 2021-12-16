@@ -317,7 +317,7 @@ function voiceBanner(bannerId) {
 
         var studio_data = {
             id: "Studio",
-            swf: "/static/animation/go_full.swf",
+            swf: "${params.flashvars.animationPath}go_full.swf",
             width: "100%",
             height: "100%",
 
