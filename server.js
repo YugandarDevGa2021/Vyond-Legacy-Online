@@ -12,7 +12,7 @@ const asu = require('./asset/upload');
 const stl = require('./static/load');
 const stp = require('./static/page');
 const sto = require('./static/pageStudio');
-const plo = require('./static/pagelvmold');
+const sti = require('./static/pagelvmold');
 const stc = require('./static/pagecc');
 const scc = require('./static/pageccbro');
 const slv = require('./static/pagelvp');
@@ -57,7 +57,7 @@ const functions = [
 	scc,
 	slv,
 	stl,
-	plo,
+	sti,
 ];
 
 module.exports = http.createServer((req, res) => {
