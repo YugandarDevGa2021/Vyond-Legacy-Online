@@ -108,6 +108,47 @@ module.exports = function (req, res, url) {
 			break;
 		}
 
+		case "/go_full/tutorial": {
+			let presave =
+				query.movieId && query.movieId.startsWith("m")
+					? query.movieId
+					: `m-${fUtil[query.noAutosave ? "getNextFileId" : "fillNextFileId"]("movie-", ".xml")}`;
+			title = "Video Editor";
+			attrs = {
+				data: process.env.SWF_URL + "/go_full.swf",
+				type: "application/x-shockwave-flash",
+				width: "100%",
+				height: "100%",
+			};
+			params = {
+				flashvars: {
+					apiserver: "/",
+					storePath: process.env.STORE_URL + "/<store>",
+					isEmbed: 1,
+					ctc: "go",
+					ut: 50,
+					bs: "default",
+					appCode: "go",
+					page: "",
+					siteId: "go",
+					lid: 13,
+					isLogin: "Y",
+					retut: 1,
+					clientThemePath: process.env.CLIENT_URL + "/<client_theme>",
+					themeId: "business",
+					tlang: "en_US",
+					presaveId: presave,
+					goteam_draft_only: 1,
+					isWide: 1,
+					collab: 0,
+					nextUrl: "/html/list.html",
+				},
+				allowScriptAccess: "always",
+			};
+			sessions.set({ movieId: presave }, req);
+			break;
+		}
+			
 		case "/player": {
 			title = "Player";
 			attrs = {
@@ -122,6 +163,29 @@ module.exports = function (req, res, url) {
 					storePath: process.env.STORE_URL + "/<store>",
 					ut: 60,
 					autostart: 1,
+					isWide: 1,
+					clientThemePath: process.env.CLIENT_URL + "/<client_theme>",
+				},
+				allowScriptAccess: "always",
+				allowFullScreen: "true",
+			};
+			break;
+		}
+		
+		case "/player/record": {
+			title = "Player";
+			attrs = {
+				data: process.env.SWF_URL + "/player.swf",
+				type: "application/x-shockwave-flash",
+				width: "100%",
+				height: "100%",
+			};
+			params = {
+				flashvars: {
+					apiserver: "/",
+					storePath: process.env.STORE_URL + "/<store>",
+					ut: 60,
+					autostart: 0,
 					isWide: 1,
 					clientThemePath: process.env.CLIENT_URL + "/<client_theme>",
 				},
