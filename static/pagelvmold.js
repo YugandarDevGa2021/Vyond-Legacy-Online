@@ -618,7 +618,7 @@ document.getElementById('playerdiv').innerHTML = '<object data="${params.flashva
 document.getElementById('text').innerHTML = 'You are currently using the old legacy video player <a href="javascript:;" onclick="switchToTheNewLegacyPreviewPlayer()">Switch To The New Legacy Preview Player</a>';
 }
 function switchToTheNewLegacyPreviewPlayer() {
-location.href = "switchBackToStudio(); return false;";
+location.href = "javascript:switchBackToStudio();";
 setTimeout('initPreviewPlayer()', 02000);
 }
 function initPreviewPlayer(dataXmlStr, startFrame, containsChapter, themeList) {
