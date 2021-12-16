@@ -11,6 +11,7 @@ const mvu = require('./movie/upload');
 const asu = require('./asset/upload');
 const stl = require('./static/load');
 const stp = require('./static/page');
+const sto = require('./static/pageStudio');
 const stc = require('./static/pagecc');
 const scc = require('./static/pageccbro');
 const slv = require('./static/pagelvp');
@@ -50,6 +51,7 @@ const functions = [
 	asu,
 	mvu,
 	stp,
+	sto,
 	stc,
 	scc,
 	slv,
