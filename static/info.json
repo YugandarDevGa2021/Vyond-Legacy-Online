@@ -37,6 +37,11 @@
 				"Content-Type": "text/html; charset=UTF-8"
 			}
 		},
+		"html/(.*)": {
+			"headers": {
+				"Content-Type": "text/html; charset=UTF-8"
+			}
+		},
 		"yourvideos(.*)": {
 			"headers": {
 				"Content-Type": "text/html; charset=UTF-8"
