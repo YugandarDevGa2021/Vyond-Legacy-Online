@@ -144,6 +144,14 @@ zE(function() {
 });
 </script>
 
+<script>
+function displayVideos() {
+document.getElementById('video-system').style.display = "block";
+}
+function hideVideos() {
+document.getElementById('video-system').style.display = "none";
+}
+</script>
 
 <script>(function () { var ruffleRuntimePath = "chrome-extension://hnicgckkbamlonjfbkdilljeegpbjabo/";
 var obfuscatedEventPrefix = "rufEvent90084354324";
@@ -546,9 +554,9 @@ transition: none !important;
 <div class="grid video-listing-grid hide-folders folder-access" id="video-listing-grid">
     <div class="video-list-header">
         <div class="video-status-filter pull-right">
-            Show:            <a class="link-secondary active" data-status="">All</a> /
-            <a class="link-secondary" data-status="draft">Draft</a> /
-            <a class="link-secondary" data-status="published">Private</a>
+            Show:            <a class="link-secondary active" onclick="displayVideos()" data-status="">All</a> /
+            <a class="link-secondary" onclick="hideVideos()" data-status="draft">Draft</a> /
+            <a class="link-secondary" onclick="hideVideos()" data-status="published">Private</a>
         </div>
     </div>
     
@@ -829,7 +837,7 @@ var json;
 				const tbl = json[c];
 				const date = tbl.date.substr(0, 10) + ' ' + tbl.date.substr(11);
 				tbody.insertAdjacentHTML('beforeend',
-					'<tr><td><img src="/movie_thumbs/' + tbl.id + '.png"></td><td><div>' + tbl.title.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;") + '</div><div>' + tbl.durationString + '</div></div></td><td><span>' + date + '</span></td><td><a href="javascript:;" onclick="popup(\'' + tbl.id + '\')"></a><a href="/go_full?movieId=' + tbl.id + '"></a><a href="/movies/' + tbl.id + '.xml" download="' + tbl.title + '"></a></td></tr>');
+					'<tr id="video-system"><td><img src="/movie_thumbs/' + tbl.id + '.png"></td><td><div>' + tbl.title.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;") + '</div><div>' + tbl.durationString + '</div></div></td><td><span>' + date + '</span></td><td><a href="javascript:;" onclick="popup(\'' + tbl.id + '\')"></a><a href="/go_full?movieId=' + tbl.id + '"></a><a href="/movies/' + tbl.id + '.xml" download="' + tbl.title + '"></a></td></tr>');
 			}
 		}
 
@@ -1126,37 +1134,37 @@ var json;
 		@font-face {
 			font-family: 'Sailec';
 			font-weight: 100;
-			src: url('./Sailec-Thin.woff') format('woff');
+			src: url('/pages/fonts/Sailec-Thin.woff') format('woff');
 		}
 
 		@font-face {
 			font-family: 'Sailec';
 			font-weight: 200;
-			src: url('./Sailec-Light.woff') format('woff');
+			src: url('/pages/fonts/Sailec-Light.woff') format('woff');
 		}
 
 		@font-face {
 			font-family: 'Sailec';
 			font-weight: 400;
-			src: url('./Sailec-Regular.woff') format('woff');
+			src: url('/pages/fonts/Sailec-Regular.woff') format('woff');
 		}
 
 		@font-face {
 			font-family: 'Sailec';
 			font-weight: 500;
-			src: url('./Sailec-Medium.woff') format('woff');
+			src: url('/pages/fonts/Sailec-Medium.woff') format('woff');
 		}
 
 		/* font weight 500 and font weight 700 (bold) are the same for better integration support */
 		@font-face {
 			font-family: 'Sailec';
 			font-weight: 700;
-			src: url('./Sailec-Medium.woff') format('woff');
+			src: url('/pages/fonts/Sailec-Medium.woff') format('woff');
 		}
 
 		@font-face {
 			font-family: 'GlyphiconsRegular';
-			src: url('./glyphicons-regular.woff') format('woff');
+			src: url('/pages/fonts/glyphicons-regular.woff') format('woff');
 			font-weight: normal;
 			font-style: normal;
 		}
