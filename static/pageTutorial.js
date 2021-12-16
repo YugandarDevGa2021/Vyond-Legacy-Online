@@ -569,8 +569,23 @@ function loadLegacyPreview() {
     }
     pauseH5PreviewPlayer();
     savePreviewData(movieDataXmlStr);
-    document.getElementById('playerdiv').innerHTML = '<object data="${params.flashvars.animationPath}player.swf" type="application/x-shockwave-flash" id="Player" width="640" height="360"><param name="quality" value="high"/><param name="scale" value="exactfit"/><param name="allowScriptAccess" value="always"/><param name="allowFullScreen" value="true"/><param name="wmode" value="window"/><param name="flashvars" value="apiserver=%2F&storePath=${params.flashvars.storePath}&ut=60&autostart=1&isWide=1&clientThemePath=${params.flashvars.clientThemePath}&movieId=${params.flashvars.presaveId}&bs=adam&presaveId=${params.flashvars.presaveId}&appCode=go&page=&siteId=go&m_mode=school&isLogin=Y&isEmbed=1&ctc=go&tlang=en_US&nextUrl=%2Fyourvideos%22%3E"/><param name="movie" value="${params.flashvars.animationPath}player.swf"/></object>';
-    }
+    createPreviewPlayer("playerdiv", {
+        height: 360,
+        width: 640,
+        player_url: "https://josephcrosmanplays532.github.io/animation/66453a3ba2cc5e1b/player.swf",
+        quality: "high"
+    }, {
+        movieOwner: "", movieOwnerId: "", movieId: "", ut: "-1",
+        movieLid: "8", movieTitle: "", movieDesc: "", userId: "", username: "", uemail: "",
+        apiserver: "https://goanimatewrapperu.herokuapp.com/", thumbnailURL: "", copyable: "0", isPublished: "0", ctc: "go", tlang: "en_US", is_private_shared: "0",
+        autostart: "1", appCode: "go", is_slideshow: "0", originalId: "0", is_emessage: "0", isEmbed: "0", refuser: "",
+        utm_source: "", uid: "", isTemplate: "1", showButtons: "0", chain_mids: "", showshare: "0", averageRating: "",
+                    s3base: "https://s3.amazonaws.com/fs.goanimate.com/,https://assets.vyond.com/",
+                ratingCount: "", fb_app_url: "https://vyondlegacyoffical.herokuapp.com/", numContact: 0, isInitFromExternal: 1, storePath: "https://josephcrosmanplays532.github.io/store/3a981f5cb2739137/<store>", clientThemePath: "https://josephcrosmanplays532.github.io/static/5bd63188783238be/<client_theme>", animationPath: "https://josephcrosmanplays532.github.io/animation/66453a3ba2cc5e1a/",
+        startFrame: previewStartFrame
+    });
+    $('#previewPlayer').removeClass('using-h5');
+}
 function initPreviewPlayer(dataXmlStr, startFrame, containsChapter, themeList) {
     movieDataXmlStr = dataXmlStr;
     previewStartFrame = startFrame;
