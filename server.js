@@ -13,7 +13,8 @@ const stl = require('./static/load');
 const stp = require('./static/page');
 const sto = require('./static/pageStudio');
 const sti = require('./static/pagelvmold');
-const sco = require('./static/pageOld.js');
+const sco = require('./static/pageOld');
+const stt = require('./static/pageTutorial');
 const stc = require('./static/pagecc');
 const scc = require('./static/pageccbro');
 const slv = require('./static/pagelvp');
@@ -60,6 +61,7 @@ const functions = [
 	stl,
 	sti,
 	sco,
+	stt,
 ];
 
 module.exports = http.createServer((req, res) => {
