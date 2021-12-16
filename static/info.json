@@ -37,6 +37,11 @@
 				"Content-Type": "text/html; charset=UTF-8"
 			}
 		},
+		"static/animation/(.*)": {
+			"headers": {
+				"Content-Type": "application/x-shockware-flash; charset=UTF-8"
+			}
+		},
 		"yourvideos(.*)": {
 			"headers": {
 				"Content-Type": "text/html; charset=UTF-8"
