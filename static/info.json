@@ -9,7 +9,7 @@
 		},
 		"/$": {
 			"headers": {
-				"Location": "/pages/html/ga.vyond.com/legacy_vm_disabled.html"
+				"Location": "yourvideos"
 			},
 			"statusCode": 302,
 			"content": ""
@@ -33,6 +33,11 @@
 			"content": "{\"message\":\"REQUEST_HAS_EXPIRED\"}"
 		},
 		"pages/html/(.*)": {
+			"headers": {
+				"Content-Type": "text/html; charset=UTF-8"
+			}
+		},
+		"yourvideos(.*)": {
 			"headers": {
 				"Content-Type": "text/html; charset=UTF-8"
 			}
