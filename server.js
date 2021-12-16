@@ -12,7 +12,6 @@ const asu = require('./asset/upload');
 const stl = require('./static/load');
 const stp = require('./static/page');
 const sto = require('./static/pageStudio');
-const stf = require('./static/pageFrame');
 const stc = require('./static/pagecc');
 const scc = require('./static/pageccbro');
 const slv = require('./static/pagelvp');
@@ -57,7 +56,6 @@ const functions = [
 	scc,
 	slv,
 	stl,
-	stf,
 ];
 
 module.exports = http.createServer((req, res) => {
