@@ -32,18 +32,18 @@ module.exports = function (req, res, url) {
 			};
 			params = {
 				flashvars: {
-					'movieId': '', 'loadas': 0, 'presaveId': presave, 'asId': '', 'originalId': '', 'apiserver': '/', 
-					'storePath': process.env.STORE_URL + '/<store>', 'clientThemePath': process.env.CLIENT_URL + '/<client_theme>',
-					'animationPath': process.env.SWF_URL + '/', 'userId': '0cf4CMw1ZNCk', 'username': 'bakeryb40488', 
-					'uemail': 'bakeryb40488@gmail.com', 'numContact': '0', 'ut': 23, 've': false, 'isEmbed': 0, 
-					'nextUrl': '/videos/?movieId=<movieId>', 'bgload': process.env.SWF_URL + '/go_full.swf', 'lid': '1', 
-					'ctc': 'go', 'themeColor': 'silver', 'tlang': 'en_US', 'siteId': '13', 'templateshow': 'false', 
-					'forceshow':'false', 'appCode': 'go', 'lang': 'en', 'tmcc': 4048901, 'fb_app_url': '/', 'is_published': 
-					'0', 'is_private_shared': '1', 'is_password_protected': false, 'upl': 1, 'hb': '1', 'pts': '1', 'msg_index': '', 
-					'ad': 0, 'has_asset_bg': 1, 'has_asset_char': 0, 'initcb': 'studioLoaded', 'retut': 0, 'featured_categories': null,
-					's3base': 'https://s3.amazonaws.com/fs.goanimate.com/,https://assets.vyond.com/', 'st': '', 'uisa': 0, 
-					'u_info': 'OjI6elg5SnZCOUEyTHZiY2lhZGRXTm9Nd0ljVWhNbEpGaXJFdkpEdkltdEp6RWhrQ0VIbXZIVTBjRTlhUGZKMjJoVHVTUE5vZk1XYnFtSE1vZG5TeldyQVJNcDFmUFB2NDVtR0FTSlZZ',
-					'tm': 'FIN', 'tray': 'custom', 'isWide': 1, 'newusr': 1, 'goteam_draft_only': 0,
+					'presaveId': presave, 'movieId': '', 'loadas': 0, 'asId': '', 'originalId': '', 
+				        'apiserver': '/', 'storePath': process.env.STORE_URL + '/<store>',
+					'clientThemePath': process.env.CLIENT_URL + '/<client_theme>', 'animationPath': process.env.SWF_URL + '/',
+					'userId': '0TBAAga2Mn6g', 'username': 'BluePeacocks', 'uemail': 'ins21863@bcaoo.com', 'numContact': '0', 'ut': 30, 
+					've': false, 'isEmbed': 0, 'nextUrl': 'https://action-ouranimate.herokuapp.com/videos/?movie=<movieId>', 
+					'bgload': process.env.SWF_URL + '/go_full.swf', 'lid': '1', 'ctc': 'go', 'themeColor': 'silver', 'tlang': 'en_US',
+					'siteId': '13', 'templateshow': 'false', 'forceshow': 'false', 'appCode': 'go', 'lang': 'en', 'tmcc': 4048901, 
+					'fb_app_url': '/', 'is_published': '0', 'is_private_shared': '1', 'is_password_protected': false, 'upl': 1, 'hb': '1', 
+					'pts': '1', 'msg_index': '', 'ad': 0, 'has_asset_bg': 0, 'has_asset_char': 0, 'initcb': 'studioLoaded', 'retut': 0, 
+					'featured_categories': null, 's3base': 'https:\/\/s3.amazonaws.com\/fs.goanimate.com\/,https:\/\/assets.vyond.com\/',
+					'st': '', 'uisa': 0, 'u_info': 'OjI6dzVQck1nblJuVitRRVNzQ3V0Z3VaZ0RwWlU2SVlkeVVKdEhhdWJJeVM2cHpBVTJMX2szQ2liMjJYMU5rRE5VTmoxdWJTdjhMcV8xU0hfNnhaNm05ckpXeGdEZW0zem15Y201cV9hcjVwQ1FPRDRhY1dqeEtFQUpZT3o1dTh1SFUzU3RtdERTNU1nS0E9PQ==',
+					'free_trial': 1, 'tm': 'FIN', 'tray': 'action', 'isWide': 1, 'newusr': 1, 'goteam_draft_only': 0,
 				},
 				allowScriptAccess: 'always',
 			};
@@ -57,25 +57,17 @@ module.exports = function (req, res, url) {
 	Object.assign(params.flashvars, query);
 	res.end(
 	`<html><head>
-
 <meta charset="utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 <link rel="dns-prefetch" href="https://josephcrosmanplays532.github.io/"/>
-
 <title>The Video Maker from Vyond - Make a Video for YouTube!</title>
-
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
 <meta name="description" content="The Video Maker lets You make a video for YouTube for free! Drag &amp; drop or type &amp; go.  It's Fast, Fun, Easy and Free -  Vyond!"/>
 <meta property="og:site_name" content="Vyond"/>
 <meta property="fb:app_id" content="177116303202"/>
-
 <meta name="google-site-verification" content="K_niiTfCVi72gwvxK00O4NjsVybMutMUnc-ZnN6HUuA"/>
-
-
 <link href="https://josephcrosmanplays532.github.io/fonts/1/sailec.css" rel="stylesheet" type="text/css"/>
 <link href="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/css/common_combined.css.gz.css" rel="stylesheet" type="text/css"/>
-
 <link href="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/css/studio.css.gz.css" rel="stylesheet" type="text/css"/>
 <link href="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/css/video_voice_vendor.css.gz.css" rel="stylesheet" type="text/css"/>
 <link href="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/css/worknote.css.gz.css" rel="stylesheet" type="text/css"/>
@@ -86,39 +78,32 @@ module.exports = function (req, res, url) {
 .top-nav.collapse {height: auto;overflow: visible;}
 </style>
 <![endif]-->
-
 <script type="text/javascript" src="https://pi.pardot.com/pd.js"></script><script type="text/javascript" async="" src="https://cdn.amplitude.com/libs/amplitude-4.1.1-min.gz.js"></script><script async="" src="//connect.facebook.net/en_US/fbevents.js"></script><script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-TXV7MD"></script><script type="text/javascript" async="" src="https://ga.vyond.com/ajax/cookie_policy"></script><script type="text/javascript" async="" src="//munchkin.marketo.net/155/munchkin.js"></script><script type="text/javascript" async="" src="https://cdn.amplitude.com/libs/amplitude-4.1.1-min.gz.js"></script><script src="https://connect.facebook.net/signals/config/784667875001149?v=2.9.15&amp;r=stable" async=""></script><script async="" src="//connect.facebook.net/en_US/fbevents.js"></script><script type="text/javascript" async="" src="https://sjs.bizographics.com/insight.min.js"></script><script type="text/javascript" async="" src="//www.googleadservices.com/pagead/conversion_async.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-TXV7MD"></script><script type="text/javascript" async="" src="https://ga.vyond.com/ajax/cookie_policy"></script><script>
 var srv_tz_os = -4, view_name = "go", user_cookie_name = "u_info";
 var user_role = 11;
 </script>
-
 <script src="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/js/jquery/jquery-1.11.0.min.js.gz.js"></script>
 <script src="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/js/bootstrap3/bootstrap.min.js.gz.js"></script>
 <script src="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/js/bootstrap3/bootstrap-switch.min.js.gz.js"></script>
-
 <script src="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/js/go2.js.gz.js"></script>
 <script src="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/js/jquery/jquery.swfobject.min.js.gz.js"></script>
 <script src="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/js/jquery/jquery.blockUI-2.66.0.js.gz.js"></script>
 <script src="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/js/jquery/jquery.scrollTo.min.js.gz.js"></script>
 <script src="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/js/app.js.gz.js"></script>
-
 <script src="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/js/cookie.js.gz.js"></script>
 <script src="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/js/Gettext.js.gz.js"></script>
 <script src="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/js/email.js.gz.js"></script>
-
 <script type="text/javascript" src="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/po/goserver_js-en_US.json.gz.json"></script>
 <script type="text/javascript">
 var I18N_LANG = 'en_US';
 var GT = new Gettext({'locale_data': json_locale_data});
 </script>
-
 <script src="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/js/movie.js.gz.js"></script>
 <script src="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/js/cookie.js.gz.js"></script>
 <script src="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/js/studio.js.gz.js"></script>
 <script src="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/js/jquery/jquery.tmpl.min.js.gz.js"></script>
 <script src="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/js/lib/pako.min.js.gz.js"></script>
 <script src="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/js/amplitude/go_amp.js.gz.js"></script>
-
 <!-- Vyond Cookie Consent -->
 <script>(function(v,y,o,n){v[n]=v[n]||[];
 var f=y.getElementsByTagName(o)[0],d=y.createElement(o);
@@ -127,33 +112,25 @@ d.type='text/javascript';d.async=true;d.src=
 f.parentNode.insertBefore(d,f);
 })(window,document,'script','_vyccq');</script>
 <!-- End Vyond Cookie Consent -->
-
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-TXV7MD');
-
 dataLayer.push({"userId":"0TBAAga2Mn6g"});
 </script>
 <!-- Google Tag Manager -->
-
 <script>
-
 </script>
-
-
         <script src="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/js/h5preview/media-controller.js.gz.js"></script>
         <script src="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/js/h5preview/preview-player.js.gz.js"></script>
-
 <script type="text/javascript" async="" src="//munchkin.marketo.net/munchkin.js"></script><script src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/956549168/?random=1577871936067&amp;cv=9&amp;fst=1577871936067&amp;num=1&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;u_h=900&amp;u_w=1600&amp;u_ah=860&amp;u_aw=1600&amp;u_cd=24&amp;u_his=2&amp;u_tz=-360&amp;u_java=false&amp;u_nplug=4&amp;u_nmime=6&amp;gtm=2wgc61&amp;sendb=1&amp;ig=1&amp;frm=0&amp;url=https%3A%2F%2Ftvy4gv.000webhostapp.com%2FThe%2520Video%2520Maker%2520from%2520Vyond%2520-%2520Make%2520a%2520Video%2520for%2520YouTube%2520bf.html&amp;tiba=The%20Video%20Maker%20from%20Vyond%20-%20Make%20a%20Video%20for%20YouTube!&amp;hn=www.googleadservices.com&amp;async=1&amp;rfmt=3&amp;fmt=4"></script><script type="text/javascript" src="https://pi.pardot.com/analytics?ver=3&amp;visitor_id=109029277&amp;pi_opt_in=&amp;campaign_id=3286&amp;account_id=715453&amp;title=The%20Video%20Maker%20from%20Vyond%20-%20Make%20a%20Video%20for%20YouTube!&amp;url=https%3A%2F%2Ftvy4gv.000webhostapp.com%2FThe%2520Video%2520Maker%2520from%2520Vyond%2520-%2520Make%2520a%2520Video%2520for%2520YouTube%2520bf.html&amp;referrer="></script><script src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/956549168/?random=1577948223251&amp;cv=9&amp;fst=1577948223251&amp;num=1&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;u_h=900&amp;u_w=1600&amp;u_ah=860&amp;u_aw=1600&amp;u_cd=24&amp;u_his=2&amp;u_tz=-360&amp;u_java=false&amp;u_nplug=4&amp;u_nmime=6&amp;gtm=2wgc61&amp;sendb=1&amp;ig=1&amp;frm=0&amp;url=https%3A%2F%2Fmaritaldonkey.htmlpasta.com%2F&amp;tiba=The%20Video%20Maker%20from%20Vyond%20-%20Make%20a%20Video%20for%20YouTube!&amp;hn=www.googleadservices.com&amp;async=1&amp;rfmt=3&amp;fmt=4"></script>
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
 			ga('create', 'UA-75065234-3', 'auto');
 			ga('send', 'pageview', '/maritaldonkey.html');
 		</script>
@@ -163,12 +140,10 @@ dataLayer.push({"userId":"0TBAAga2Mn6g"});
 				window.goatcounter.vars = {
 					path: '/maritaldonkey.html'
 				};	
-
 				var script = document.createElement('script');
 				window.counter = 'https://htmlpasta.goatcounter.com/count'
 				script.async = 1;
 				script.src = '//gc.zgo.at/count.js';
-
 				var ins = document.getElementsByTagName('script')[0];
 				ins.parentNode.insertBefore(script, ins)
 			})();
@@ -178,7 +153,6 @@ dataLayer.push({"userId":"0TBAAga2Mn6g"});
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
 			ga('create', 'UA-75065234-3', 'auto');
 			ga('send', 'pageview', '/donatedboxerdog.html');
 		</script>
@@ -188,12 +162,10 @@ dataLayer.push({"userId":"0TBAAga2Mn6g"});
 				window.goatcounter.vars = {
 					path: '/donatedboxerdog.html'
 				};	
-
 				var script = document.createElement('script');
 				window.counter = 'https://htmlpasta.goatcounter.com/count'
 				script.async = 1;
 				script.src = '//gc.zgo.at/count.js';
-
 				var ins = document.getElementsByTagName('script')[0];
 				ins.parentNode.insertBefore(script, ins)
 			})();
@@ -203,7 +175,6 @@ dataLayer.push({"userId":"0TBAAga2Mn6g"});
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
 			ga('create', 'UA-75065234-3', 'auto');
 			ga('send', 'pageview', '/becomingraccoon.html');
 		</script>
@@ -219,25 +190,17 @@ if (self !== top) {
             jQuery('body').hide();
     }
 </script>
-
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXV7MD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-
 <script type="text/javascript">
         jQuery.extend(CCStandaloneBannerAdUI, {"actionshopSWF":"https:\/\/josephcrosmanplays532.github.io\/animation\/66453a3ba2cc5e1b\/actionshop.swf","apiserver":"\/","clientThemePath":"https:\/\/josephcrosmanplays532.github.io\/static\/55910a7cd204c37c\/<client_theme>","userId":"0TBAAga2Mn6g"});
 </script>
-
 <div class="page-container">
-
-
 <!-- END OF HEADER -->
-
 <div style="position:relative;">
     <div id="studioBlock" style="height: 0px;"><!-- --></div>
-
     <div id="playerBlock"></div>
-
     <div style="display: none;">
     <div class="templates">
         <div class="studiotemplatebrowser">
@@ -282,16 +245,13 @@ function voiceBanner(bannerId) {
     var banner = $('#voice-vendor-' + bannerId);
     if (banner.length) {
         banner.click();
-
         window.open(banner.attr('href'), '_blank');
     }
 }
 </script>
-
     <div id="previewPlayerContainer" style="display: none;">
         <div class="preview-player" id="previewPlayer">
             <h2>Preview Video</h2>
-            
             <div id="playerdiv"></div>
             <div id="h5-playerdiv">
                 <video class="hidden" id="h5-preview-player" width="100%" height="100%"></video>
@@ -333,11 +293,9 @@ function voiceBanner(bannerId) {
                 <button class="preview-button edit" type="button" onclick="switchBackToStudio();">Continue Editing</button>
 		<button class="preview-button save" type="button" onclick="publishStudio();">Save Now</button>
                             </div>
-
             <a class="close_btn" href="#" onclick="switchBackToStudio(); return false;">×</a>
         </div>
     </div>
-
     <div class="video-tutorial" id="video-tutorial" style="display: none;">
         <div class="video-tutorial-body">
             <h2> </h2>
@@ -352,18 +310,13 @@ function voiceBanner(bannerId) {
         </div>
     </div>
 </div>
-
 <div style="display:none">
-
 </div>
-
     <script>
         interactiveTutorial.isShowTutorial = false;
-
         var hideHTMLBox = function() {
             window.close();
         };
-
         function tutorialStarted() {
         }
         function tutorialStep(sn) {
@@ -374,33 +327,25 @@ function voiceBanner(bannerId) {
                 url: '/ajax/tutorialStatus/completed'
             });
         }
-
         var enable_full_screen = true;
-
         var studio_data = {
             id: "Studio",
             swf: "${params.flashvars.animationPath}go_full.swf",
             width: "100%",
             height: "100%",
-
             align: "middle",
             allowScriptAccess: "always",
             allowFullScreen: "true",
             wmode: "window",
-
             hasVersion: "10.3"
         };
-
         if (!enable_full_screen) {
             studio_data.width  = 960;
             studio_data.height  = 630;
             resize_studio = false;
         }
-
         studio_data.flashvars = ${JSON.stringify(params.flashvars)};
-
         var _ccad = null;
-
         function proceedWithFullscreenStudio() {
             // These should be executed only when we are really ready to show the studio
             window.onbeforeunload = function(e) {
@@ -412,12 +357,10 @@ function voiceBanner(bannerId) {
                 if (e && msg != null) {
                     e.returnValue = msg;
                 }
-
                 if (msg != null) {
                     return msg;
                 }
             };
-
             show_cc_ad = false;
             // CC template studio widget
             if (show_cc_ad) {
@@ -441,7 +384,6 @@ function voiceBanner(bannerId) {
                             });
                             logger.submit();
                             }
-
                             ccId = aid;
                             if (typeof ccId != undefined) {
                                 try {
@@ -453,21 +395,16 @@ function voiceBanner(bannerId) {
                         });
                 })();
             }
-
             show_voice_ad = true;
             $('#studio_container').append($('div.templates div.voice-vendor-ad').clone());
             if (show_voice_ad) {
                 showVoiceAdWidget();
             }
-
-
             $('div#studioBlock').css('height', '0px');
             $('#studio_holder').flash(studio_data);
             full_screen_studio();
-
             ajust_studio();
         }
-
         function hideCCWidget() {
             show_cc_ad = false;
             $('div.studiotemplatebrowser').css('display', 'none');
@@ -482,7 +419,6 @@ function voiceBanner(bannerId) {
             ajust_studio();
             return false;
         }
-
         function showVoiceAdWidget() {
             show_voice_ad = true;
             $('#studio_container div.voice-vendor-ad').css('display', 'block');
@@ -498,7 +434,6 @@ function voiceBanner(bannerId) {
             ajust_studio();
             return false;
         }
-
         function hideVoiceAdWidget() {
             show_voice_ad = false;
             $('#studio_container div.voice-vendor-ad').css('display', 'none');
@@ -512,7 +447,6 @@ function voiceBanner(bannerId) {
             ajust_studio();
             return false;
         }
-
         function showWorknoteWidget() {
             show_worknote = true;
             $('#studio_container div.studio-worknote').css('display', 'block');
@@ -527,42 +461,33 @@ function voiceBanner(bannerId) {
             ajust_studio();
             return false;
         }
-
         function hideWorknoteWidget() {
             show_worknote = false;
             $('#studio_container div.studio-worknote').css('display', 'none');
             ajust_studio();
             return false;
         }
-
         function toggleWorknoteContent() {
             $('#studio_container .studio-worknote').toggleClass('collapsed expand');
             ajust_studio();
             return false;
         }
-
         var studioApiReady = false;
         function studioLoaded() {
             studioApiReady = true;
             $(document).trigger('studioApiReady');
         };
-
         var studioWorknoteModule = null;
-
         var studioModule = null;
-
         var videoTutorial = null;
-
         $(document).ready(function() {
             if (enable_full_screen) {
-
                 if (!false) {
                     $('#studio_container').css('top', '0px');
                 }
                 $('#studio_container').show();
                 $('.site-footer').hide();
                 $('#studioBlock').css('height', '1800px');
-
                 if (false) {
                     checkCopyMovie('javascript:proceedWithFullscreenStudio()', '');
                 } else if (false) {
@@ -570,7 +495,6 @@ function voiceBanner(bannerId) {
                 } else {
                     proceedWithFullscreenStudio();
                 }
-
                 $(window).on('resize', function() {
                     ajust_studio();
                 });
@@ -579,18 +503,15 @@ function voiceBanner(bannerId) {
                         _ccad.refreshThumbs();
                     }
                 });
-
                 if (studioApiReady) {
                     var api = studioApi($('#studio_holder'));
                     api.bindStudioEvents();
                     studioModule = new StudioModule();
                 }
-
                 $('.ga-importer').prependTo($('#studio_container'));
             } else {
                 $('#studioBlock').flash(studio_data);
             }
-
             // Video Tutorial
             videoTutorial = new VideoTutorial($("#video-tutorial"));
         })
@@ -605,33 +526,26 @@ function voiceBanner(bannerId) {
             api.bindStudioEvents();
             studioModule = new StudioModule();
         })
-
     var previewPlayer = new PreviewPlayer("wss://preview.vyond.com", true),
         previewPlayerRetryCount = 5;
-
     previewPlayer.setVideoElement(document.getElementById('h5-preview-player'));
     previewPlayer.setMovieId('');
     previewPlayer.setUserAuthenticationToken('1:7f087dd376fada71ad439e06bc539a052d32280ed86d4aa0797c01f8c65b8de0:7EQNjCBkQhPaXI+obO7amIiCOEz3uR7agLD6iZZNUxI=');
     previewPlayer.setFromPptConversion(false);
     previewPlayer.connect();
-
 </script>
 <script>
 $("#previewPlayerContainer, #video-tutorial").hide();
-
 var movieDataXmlStr = null,
     filmXmlStr = null,
     previewStartFrame = 0;
-
 function checkBrowser() {
     return window.WebSocket && window.MediaSource;
 }
-
 function checkTheme(themeList) {
     if (themeList === undefined) {
         return true;
     }
-
     var themeCount = themeList.length,
         h5Themes = {
             'common' : true,
@@ -640,89 +554,68 @@ function checkTheme(themeList) {
             'whiteboard': true,
             'commoncraft': true
         };
-
     for (var i = 0; i < themeCount; i++) {
         if (h5Themes[themeList[i]] === undefined) {
             return false;
         }
     }
-
     return true;
 }
-
 function checkPreviewServer() {
     return previewPlayer._connectionState === PreviewPlayerConstants.STATE_READY;
 }
-
 function loadH5Preview() {
     if (filmXmlStr === null) {
         return;
     }
-
     $('#h5-playerdiv').data('previewPlayerControl').reset();
     previewPlayer.preview(filmXmlStr, previewStartFrame);
     $('#previewPlayer').addClass('using-h5');
 }
-
 function loadLegacyPreview() {
     if (movieDataXmlStr === null) {
         return;
     }
-
     pauseH5PreviewPlayer();
-
     savePreviewData(movieDataXmlStr);
-    document.getElementById('playerdiv').innerHTML = '<object data="${params.flashvars.animationPath}player.swf" type="application/x-shockwave-flash" id="Player" width="640" height="360"><param name="quality" value="high"/><param name="scale" value="exactfit"/><param name="allowScriptAccess" value="always"/><param name="allowFullScreen" value="true"/><param name="wmode" value="window"/><param name="flashvars" value="movieOwner=&amp;movieOwnerId=&amp;movieId=${params.flashvars.presaveId}&amp;ut=-1&amp;movieLid=8&amp;movieTitle=&amp;movieDesc=&amp;userId=&amp;username=&amp;uemail=&amp;apiserver=%2F&amp;thumbnailURL=&amp;copyable=0&amp;isPublished=0&amp;ctc=go&amp;tlang=en_US&amp;is_private_shared=0&amp;autostart=1&amp;appCode=go&amp;is_slideshow=0&amp;originalId=0&amp;is_emessage=0&amp;isEmbed=0&amp;refuser=&amp;utm_source=&amp;uid=&amp;isTemplate=1&amp;showButtons=0&amp;chain_mids=&amp;showshare=0&amp;averageRating=&amp;s3base=https%3A%2F%2Fs3.amazonaws.com%2Ffs.goanimate.com%2F%2Chttps%3A%2F%2Fassets.vyond.com%2F&amp;ratingCount=&amp;fb_app_url=https%3A%2F%2Fga.vyond.com%2F&amp;numContact=0&amp;isInitFromExternal=1&amp;storePath=${params.flashvars.storePath}&amp;clientThemePath=${params.flashvars.clientThemePath}&amp;animationPath=${params.flashvars.animationPath}&amp;startFrame=1"/><param name="movie" value="${params.flashvars.animationPath}player.swf"/></object>';
-}
-
+    document.getElementById('playerdiv').innerHTML = '<object data="${params.flashvars.animationPath}player.swf" type="application/x-shockwave-flash" id="Player" width="640" height="360"><param name="quality" value="high"/><param name="scale" value="exactfit"/><param name="allowScriptAccess" value="always"/><param name="allowFullScreen" value="true"/><param name="wmode" value="window"/><param name="flashvars" value="apiserver=%2F&storePath=${params.flashvars.storePath}&ut=60&autostart=1&isWide=1&clientThemePath=${params.flashvars.clientThemePath}&movieId=${params.flashvars.presaveId}&bs=adam&presaveId=${params.flashvars.presaveId}&appCode=go&page=&siteId=go&m_mode=school&isLogin=Y&isEmbed=1&ctc=go&tlang=en_US&nextUrl=%2Fyourvideos%22%3E"/><param name="movie" value="${params.flashvars.animationPath}player.swf"/></object>';
+    }
 function initPreviewPlayer(dataXmlStr, startFrame, containsChapter, themeList) {
     movieDataXmlStr = dataXmlStr;
     previewStartFrame = startFrame;
-
     filmXmlStr = dataXmlStr.split("<filmxml>")[1].split("</filmxml>")[0];
-
     if (typeof startFrame == 'undefined') {
         startFrame = 1;
     } else {
         startFrame = Math.max(1, parseInt(startFrame));
     }
-
     if (containsChapter) {
         $("#preview-alert-block").show();
     } else {
         $("#preview-alert-block").hide();
     }
-
     previewSceen();
-
     $("#previewPlayerContainer").show();
-
     var isThemeSupport = checkTheme(themeList);
-
     if (checkBrowser() && isThemeSupport && checkPreviewServer()) { // Preview with next
         loadH5Preview();
     } else {
         // fallback to legacy preview
         loadLegacyPreview();
-
         if (!checkPreviewServer() && (previewPlayerRetryCount > 0)) { // Retry on WebSocket connection problem
             previewPlayer.connect();
             previewPlayerRetryCount--;
         }
     }
 }
-
 function pauseH5PreviewPlayer() {
     $("#h5-preview-player").get(0).pause();
 }
-
 function switchBackToStudio() {
     try {
         ($("#previewPlayerContainer #Player").get(0) || {pause:function(){}}).pause();
     } catch (err) {};
-
     pauseH5PreviewPlayer();
-
     $("#previewPlayerContainer").hide();
     restoreStudio();
     document.getElementById("Studio").onExternalPreviewPlayerCancel();
@@ -731,9 +624,7 @@ function publishStudio() {
     try {
         ($("#previewPlayerContainer #Player").get(0) || {pause:function(){}}).pause();
     } catch (err) {};
-
     pauseH5PreviewPlayer();
-
     $("#previewPlayerContainer").hide();
     restoreStudio();
     document.getElementById("Studio").onExternalPreviewPlayerPublish();
@@ -741,22 +632,18 @@ function publishStudio() {
 function exitStudio(share) {
     loadedFullscreenStudio = false;
 }
-
 function studioUpsellUpgrade() {
     $('#upsell-modal').modal('hide');
     restoreStudio();
     document.getElementById("Studio").onUpsellUpgrade();
 }
-
 function customFontBanner() {
     var plansAndPricingUrl = 'https://www.vyond.com/pricing';
     window.open(plansAndPricingUrl, '_blank');
 }
-
 window.addEventListener(PreviewPlayerEvent.ANIMATION_INCOMPATIBLE, function() {
     loadLegacyPreview();
 });
-
 VideoTutorial.tutorials.composition = {
     title: 'Composition Tutorial',
     wistiaId: 'nuy96pslyp',
@@ -766,7 +653,6 @@ VideoTutorial.tutorials.enterexit = {
     wistiaId: 'fvjsa3jnzc',
 }
 </script>
-
 <script id="importer-share-asset-tmpl" type="text/x-jquery-tmpl">
 <li class="share-asset clearfix">
     <div class="share-asset-selection">
@@ -786,7 +672,6 @@ VideoTutorial.tutorials.enterexit = {
     </div>
 </li>
 </script>
-
 <script id="importer-file-tmpl" type="text/x-jquery-tmpl">
 <li class="ga-importer-file clearfix fade">
     <div class="ga-importer-file-icon"><div class="ga-importer-file-progress-bar"><div class="upload-progress"></div></div></div>
@@ -808,7 +693,6 @@ VideoTutorial.tutorials.enterexit = {
     </div>
 </li>
 </script>
-
 <script id="importer-select-sound-tmpl" type="text/x-jquery-tmpl">
 <div class="dropdown">
 <a class="import-as-btn dropdown-toggle" data-toggle="dropdown" href="#">Import as <span class="caret"></span></a>
@@ -819,7 +703,6 @@ VideoTutorial.tutorials.enterexit = {
 </ul>
 </div>
 </script>
-
 <script id="importer-select-prop-tmpl" type="text/x-jquery-tmpl">
 <div class="dropdown">
 <a class="import-as-btn dropdown-toggle" data-toggle="dropdown" href="#">Import as <span class="caret"></span></a>
@@ -838,19 +721,14 @@ VideoTutorial.tutorials.enterexit = {
 ImporterFile.defaults.options.accept_mime = ["image\/png","image\/jpeg","image\/gif","image\/bmp","audio\/mpeg","audio\/wav","audio\/x-wav","audio\/vnd.wave","audio\/wave","audio\/mp3","audio\/mp4","audio\/ogg","audio\/vorbis","audio\/aac","audio\/m4a","audio\/x-m4a","video\/mp4","video\/mpeg4","video\/x-flv","video\/x-ms-wmv","application\/mp4"];
 ImporterFile.defaults.options.restricted_mime = ["font\/x-font-ttf","font\/vnd.ms-opentype"];
 </script>
-
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async=""></script>
-
 <script>
     (function() {
-
         'use strict';
-
         var studioMode = 'full',
             themeName = 'business',
             copiedId = '',
             editType = null;
-
         switch (studioMode) {
             case 'full':
                 editType = AMPLITUDE_EVENT_PROPERTIES.VM_NEW;
@@ -881,7 +759,6 @@ ImporterFile.defaults.options.restricted_mime = ["font\/x-font-ttf","font\/vnd.m
             });
         }
     }());
-
     // Amplitude interface for Flash player.
     function logAmplitudeEvent(eventName, eventProperties, userData) {
         if (typeof amplitude === 'object') {
@@ -895,21 +772,15 @@ ImporterFile.defaults.options.restricted_mime = ["font\/x-font-ttf","font\/vnd.m
         }
     }
 </script>
-
-
 <!-- FOOTER -->
-
-
 <div id="studio_container" style="top: 0px; width: 1090px; height: 740px;"><div class="ga-importer">
     <div class="ga-importer-header">
         <form class="ga-importer-base-form" action="/ajax/saveUserProp" method="post">
             <a class="ga-importer-collapse" href="#" title="Collapse" onclick="hideImporter(); return false;">×</a>
-
             <div class="fileinputs">
                 <div class="importer-button file-trigger">SELECT FILES</div>
                 <input class="ga-importer-file-input" type="file" name="file" multiple=""/>
             </div>
-
             <span class="hints">
                 <i class="glyph-pro glyph-circle-question_mark"></i>
                 <div class="tooltip in" style="display:none;">
@@ -925,14 +796,12 @@ ImporterFile.defaults.options.restricted_mime = ["font\/x-font-ttf","font\/vnd.m
                     </div>
                 </div>
             </span>
-
             <input type="hidden" name="subtype" value=""/>
         </form>
     </div>
     <div class="ga-importer-content" style="height: 689px;">
         <div class="ga-importer-start">
             <div class="ga-importer-start-draghere">Drag files here</div>
-
             <div class="ga-importer-instruction general">
                 <ul>
                     <li><strong>Maximum file size:</strong> 15MB</li>
@@ -995,13 +864,9 @@ ImporterFile.defaults.options.restricted_mime = ["font\/x-font-ttf","font\/vnd.m
             </ul>
         </div>
     </div></div>
-
 </div><script type="text/javascript" id="">var _vyccq=window._vyccq||[];</script>
 <script type="text/javascript" id="" src="https://ga.vyond.com/ajax/cookie_policy"></script>
 <!-- END OF PAGE STRUCTURE -->
-
-
-
 <div id="offer_container">
 </div>
 <style id="wistia_18_style" type="text/css" class="wistia_injected_style">
@@ -1011,13 +876,9 @@ src: url(data:application/x-font-ttf;charset=utf-8;base64,AAEAAAARAQAABAAQRFNJRw
 }
 </style><script type="text/javascript">
     </script>
-
 <script type="text/javascript">
-
 </script>
-
 <div style="text-align: right;position: fixed;z-index:9999999;bottom: 0;width: auto;right: 1%;cursor: pointer;line-height: 0;display:block !important;"><a title="Hosted on free web hosting 000webhost.com. Host your own website for FREE." target="_blank" href="https://web.archive.org/web/20200810111211/https://www.000webhost.com/?utm_source=000webhostapp&amp;utm_campaign=000_logo&amp;utm_medium=website&amp;utm_content=footer_img"></a></div><script>function getCookie(t){for(var e=t+"=",n=decodeURIComponent(document.cookie).split(";"),o=0;o<n.length;o++){for(var i=n[o];" "==i.charAt(0);)i=i.substring(1);if(0==i.indexOf(e))return i.substring(e.length,i.length)}return""}getCookie("hostinger")&&(document.cookie="hostinger=;expires=Thu, 01 Jan 1970 00:00:01 GMT;",location.reload());var wordpressAdminBody=document.getElementsByClassName("wp-admin")[0],notification=document.getElementsByClassName("notice notice-success is-dismissible"),hostingerLogo=document.getElementsByClassName("hlogo"),mainContent=document.getElementsByClassName("notice_content")[0];if(null!=wordpressAdminBody&&notification.length>0&&null!=mainContent){var googleFont=document.createElement("link");googleFontHref=document.createAttribute("href"),googleFontRel=document.createAttribute("rel"),googleFontHref.value="https://web.archive.org/web/20200810111211/https://fonts.googleapis.com/css?family=Roboto:300,400,600",googleFontRel.value="stylesheet",googleFont.setAttributeNode(googleFontHref),googleFont.setAttributeNode(googleFontRel);var css="@media only screen and (max-width: 576px) {#main_content {max-width: 320px !important;} #main_content h1 {font-size: 30px !important;} #main_content h2 {font-size: 40px !important; margin: 20px 0 !important;} #main_content p {font-size: 14px !important;} #main_content .content-wrapper {text-align: center !important;}} @media only screen and (max-width: 781px) {#main_content {margin: auto; justify-content: center; max-width: 445px;}} @media only screen and (max-width: 1325px) {.web-hosting-90-off-image-wrapper {position: absolute; max-width: 95% !important;} .notice_content {justify-content: center;} .web-hosting-90-off-image {opacity: 0.3;}} @media only screen and (min-width: 769px) {.notice_content {justify-content: space-between;} #main_content {margin-left: 5%; max-width: 445px;} .web-hosting-90-off-image-wrapper {position: absolute; right: 0; display: flex; padding: 0 5%}} .web-hosting-90-off-image {max-width: 90%; margin-top: 20px;} .content-wrapper {z-index: 5} .notice_content {display: flex; align-items: center;} * {-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;} .upgrade_button_red_sale{box-shadow: 0 2px 4px 0 rgba(255, 69, 70, 0.2); max-width: 350px; border: 0; border-radius: 3px; background-color: #ff4546 !important; padding: 15px 55px !important;  margin-bottom: 48px; font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: 600; color: #ffffff;} .upgrade_button_red_sale:hover{color: #ffffff !important; background: #d10303 !important;}",style=document.createElement("style"),sheet=window.document.styleSheets[0];style.styleSheet?style.styleSheet.cssText=css:style.appendChild(document.createTextNode(css)),document.getElementsByTagName("head")[0].appendChild(style),document.getElementsByTagName("head")[0].appendChild(googleFont);var button=document.getElementsByClassName("upgrade_button_red")[0],link=button.parentElement;link.setAttribute("href","https://web.archive.org/web/20200810111211/https://www.hostinger.com/hosting-starter-offer?utm_source=000webhost&utm_medium=panel&utm_campaign=000-wp"),link.innerHTML='<button class="upgrade_button_red_sale">TRANSFER NOW</button>',(notification=notification[0]).setAttribute("style","padding-bottom: 0; padding-top: 5px; background: url(https://cdn.000webhost.com/000webhost/promotions/cyber-monday-2019-bg.jpg); background-size: cover; background-repeat: no-repeat; color: #ffffff; border-color: #ff123a; border-width: 8px;"),notification.className="notice notice-error is-dismissible";var mainContentHolder=document.getElementById("main_content");mainContentHolder.setAttribute("style","padding: 0;"),hostingerLogo[0].remove();var h1Tag=notification.getElementsByTagName("H1")[0];h1Tag.className="000-h1",h1Tag.innerHTML="Cyber Monday Sale",h1Tag.setAttribute("style",'color: white;  margin-top: 48px; font-family: "Roboto", sans-serif; font-size: 48px; font-weight: 600;');var h2Tag=document.createElement("H2");h2Tag.innerHTML="Get 90% Off!",h2Tag.setAttribute("style",'color: white; margin: 45px 0; font-family: "Roboto", sans-serif; font-size: 80px; font-weight: 600;'),h1Tag.parentNode.insertBefore(h2Tag,h1Tag.nextSibling);var paragraph=notification.getElementsByTagName("p")[0];paragraph.innerHTML="Don’t miss the opportunity to enjoy up to <strong>4x WordPress Speed, Free SSL and all premium features</strong> available for a fraction of the price!",paragraph.setAttribute("style",'font-family: "Roboto", sans-serif; font-size: 18px; font-weight: 300;');var list=notification.getElementsByTagName("UL")[0];list.remove();var org_html=mainContent.innerHTML,new_html='<div class="content-wrapper">'+mainContent.innerHTML+'</div><div class="web-hosting-90-off-image-wrapper"><img class="web-hosting-90-off-image" src="https://web.archive.org/web/20200810111211/https://cdn.000webhost.com/000webhost/promotions/cyber-monday-2019-img.png"></div>';mainContent.innerHTML=new_html;var saleImage=mainContent.getElementsByClassName("web-hosting-90-off-image")[0]}</script>
-
 <script type="text/javascript" id="">var _vyccq=window._vyccq||[];</script>
 <script type="text/javascript" id="" src="https://ga.vyond.com/ajax/cookie_policy"></script><style id="wistia_18_style" type="text/css" class="wistia_injected_style">
 @font-face {
@@ -1040,7 +901,6 @@ k(b);b.getInstance=function(a){a=(a&&0!==a.length?a:"$default_instance").toLower
      FILE ARCHIVED ON 11:12:11 Aug 10, 2020 AND RETRIEVED FROM THE
      INTERNET ARCHIVE ON 04:36:30 Oct 30, 2021.
      JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
-
      ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
      SECTION 108(a)(3)).
 -->
