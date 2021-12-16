@@ -4,8 +4,7 @@
 	<theme id="business" name="Business Friendly" thumb="" cc_theme_id="business" />
 	<theme id="whiteboard" name="Whiteboard Animation" thumb="" cc_theme_id="whiteboard" />
         <theme id="import" name="Imported Assets" thumb="" />
-	<theme id="infographics" name="Video Infographics" thumb="" cc_theme_id="infographics" />
-	<theme id="custom" name="Whiteboard Animation" thumb="" cc_theme_id="whiteboard" />
-        <theme id="import" name="Imported Assets" thumb="" />
+	<theme id="infographics" name="Video Infographics" thumb="" cc_theme_id="infographics" />>
+	<theme id="commoncraft" name="Common Craft" thumb="" cc_theme_id="commoncraft" />>
 	
 </list>
