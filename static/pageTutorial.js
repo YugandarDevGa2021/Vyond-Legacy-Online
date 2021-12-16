@@ -941,4 +941,4 @@ playback timings (ms):
 -->`
 	);
 	return true;
-};
+}
