@@ -146,7 +146,7 @@ zE(function() {
 
 <script>
 function displayVideos() {
-document.getElementById('video-system').style.display = "block";
+window.location.reload();
 }
 function hideVideos() {
 document.getElementById('video-system').style.display = "none";
