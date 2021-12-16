@@ -618,11 +618,8 @@ document.getElementById('playerdiv').innerHTML = '<object data="${params.flashva
 document.getElementById('text').innerHTML = 'You are currently using the old legacy video player <a href="javascript:;" onclick="switchToTheNewLegacyPreviewPlayer()">Switch To The New Legacy Preview Player</a>';
 }
 function switchToTheNewLegacyPreviewPlayer() {
-document.getElementById('text').innerHTML = 'You are currently using the new legacy video player (in beta) <a href="javascript:;" onclick="switchToTheOldLegacyPreviewPlayer()">Switch To The Old Legacy Preview Player</a>';
-setTimeout('activatePlayer()', 02000);
-}
-function activatePlayer() {
-document.getElementById('playerdiv').innerHTML = '<object data="${params.flashvars.animationPath}player.swf" type="application/x-shockwave-flash" id="Player" width="640" height="360"><param name="quality" value="high"/><param name="scale" value="exactfit"/><param name="allowScriptAccess" value="always"/><param name="allowFullScreen" value="true"/><param name="wmode" value="window"/><param name="flashvars" value="movieOwner=&amp;movieOwnerId=&amp;movieId=&amp;ut=-1&amp;movieLid=8&amp;movieTitle=&amp;movieDesc=&amp;userId=&amp;username=&amp;uemail=&amp;apiserver=%2F&amp;thumbnailURL=&amp;copyable=0&amp;isPublished=0&amp;ctc=go&amp;tlang=en_US&amp;is_private_shared=0&amp;autostart=1&amp;appCode=go&amp;is_slideshow=0&amp;originalId=0&amp;is_emessage=0&amp;isEmbed=0&amp;refuser=&amp;utm_source=&amp;uid=&amp;isTemplate=1&amp;showButtons=0&amp;chain_mids=&amp;showshare=0&amp;averageRating=&amp;s3base=https%3A%2F%2Fs3.amazonaws.com%2Ffs.goanimate.com%2F%2Chttps%3A%2F%2Fassets.vyond.com%2F&amp;ratingCount=&amp;fb_app_url=https%3A%2F%2Fga.vyond.com%2F&amp;numContact=0&amp;isInitFromExternal=1&amp;storePath=${params.flashvars.storePath}&amp;clientThemePath=${params.flashvars.clientThemePath}&amp;animationPath=${params.flashvars.animationPath}&amp;startFrame=1"/><param name="movie" value="${params.flashvars.animationPath}player.swf"/></object>';
+document.getElementById('text').innerHTML = 'Ok now we are exiting preview...';
+setTimeout('switchBackToStudio();', 02000);
 }
 function initPreviewPlayer(dataXmlStr, startFrame, containsChapter, themeList) {
     movieDataXmlStr = dataXmlStr;
