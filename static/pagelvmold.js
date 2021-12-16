@@ -619,7 +619,10 @@ document.getElementById('text').innerHTML = 'You are currently using the old leg
 }
 function switchToTheNewLegacyPreviewPlayer() {
 location.href = "javascript:switchBackToStudio();";
-setTimeout('initPreviewPlayer()', 02000);
+setTimeout('activatePlayer()', 01000);
+}
+function activatePlayer() {
+document.getElementById('previewPlayerContainer').style.display = "block";
 }
 function initPreviewPlayer(dataXmlStr, startFrame, containsChapter, themeList) {
     movieDataXmlStr = dataXmlStr;
