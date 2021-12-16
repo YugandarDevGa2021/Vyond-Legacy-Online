@@ -24,8 +24,6 @@ module.exports = function (req, res, url) {
 	var attrs, params, title;
 	switch (url.pathname) {
 		case '/go_full/tutorial': {
-			let presave = query.movieId && query.movieId.startsWith('m') ? query.movieId :
-				`m-${fUtil[query.noAutosave ? 'getNextFileId' : 'fillNextFileId']('movie-', '.xml')}`;
 			title = 'Video Editor';
 			attrs = {
 				data: process.env.SWF_URL + '/go_full.swf',
@@ -42,7 +40,6 @@ module.exports = function (req, res, url) {
 				},
 				allowScriptAccess: 'always',
 			};
-			sessions.set({ movieId: presave }, req);
 			break;
 		}
 		default:
