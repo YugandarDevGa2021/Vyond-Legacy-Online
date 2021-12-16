@@ -615,7 +615,7 @@ function loadLegacyPreview() {
 }
 function switchToTheOldLegacyPreviewPlayer() {
 document.getElementById('playerdiv').innerHTML = '<object data="${params.flashvars.animationPath}player.swf" type="application/x-shockwave-flash" id="Player" width="640" height="360"><param name="quality" value="high"/><param name="scale" value="exactfit"/><param name="allowScriptAccess" value="always"/><param name="allowFullScreen" value="true"/><param name="wmode" value="window"/><param name="flashvars" value="apiserver=%2F&storePath=${params.flashvars.storePath}&ut=60&autostart=1&isWide=1&clientThemePath=${params.flashvars.clientThemePath}&movieId=${params.flashvars.presaveId}&bs=adam&presaveId=${params.flashvars.presaveId}&appCode=go&page=&siteId=go&m_mode=school&isLogin=Y&isEmbed=1&ctc=go&tlang=en_US&nextUrl=%2Fyourvideos%22%3E"/><param name="movie" value="${params.flashvars.animationPath}player.swf"/></object>';
-document.getElementById('text').innerHTML = 'You are currently using the old legacy video player <a href="javascript;;" onclick="switchToTheNewLegacyPreviewPlayer()">Switch To The New Legacy Preview Player</a>';
+document.getElementById('text').innerHTML = 'You are currently using the old legacy video player <a href="javascript:;" onclick="switchToTheNewLegacyPreviewPlayer()">Switch To The New Legacy Preview Player</a>';
 }
 function switchToTheNewLegacyPreviewPlayer() {
     document.getElementById('text').innerHTML = 'You are currently using the new legacy video player (in beta) <a href="javascript:;" onclick="switchToTheOldLegacyPreviewPlayer()">Switch To The Old Legacy Preview Player</a>';
