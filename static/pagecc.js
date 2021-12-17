@@ -167,7 +167,7 @@ if (self !== top) {
 <div class="container container-cc">
         <ul class="breadcrumb">
             <li><a href="/videomaker">Make a video</a></li>
-            <li><a href="/charactercreator/">Your Characters</a></li>
+            <li><a href="/charactercreator/">Whiteboard Animation Characters</a></li>
             <li class="active">Create a new character</li>
         </ul>
 <div>
@@ -193,7 +193,7 @@ function goSubscribe()
 function characterSaved()
 {
     SetCookie('cc_saved', '1', 1, '/');
-    window.location = 'https://vyond2019.herokuapp.com/yourvideos';
+    window.location = '/yourvideos';
 }
 </script>
     </div>
@@ -203,7 +203,7 @@ function fbShare(ccId)
     if (ccId == undefined) {
         return;
     }
-    var url = encodeURIComponent('https://vyondremastered1.herokuapp.com/?cc_id=' + ccId);
+    var url = encodeURIComponent('https://vyondlegacyoffical.herokuapp.com/charactercreator/new_char/?cc_id=' + ccId);
     var title = encodeURIComponent('I just created a new character on Vyond');
     var shareUrl = 'https://www.facebook.com/sharer.php?u=' + url + '&t=' + title;
     window.open(shareUrl, 'fbshare', 'height=350, width=650, top=100, left=100, toolbar=no, menubar=no, scrollbars=no, resizable=no, status=no');
