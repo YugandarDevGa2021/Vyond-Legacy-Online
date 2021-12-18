@@ -585,12 +585,10 @@ function loadLegacyPreview() {
         quality: "high"
     }, {
         bs: "adam", nextUrl: "/yourvideos", movieId: "${params.flashvars.presaveId}", ut: "60",
-        isWide: "1", presaveId: "${params.flashvars.presaveId}", page: "", userId: "", username: "", uemail: "",
-        apiserver: "/", thumbnailURL: "", copyable: "0", isPublished: "0", ctc: "go", tlang: "en_US", is_private_shared: "0",
-        autostart: "1", appCode: "go", is_slideshow: "0", originalId: "0", is_emessage: "0", isEmbed: "0", refuser: "",
-        utm_source: "", uid: "", isTemplate: "1", showButtons: "0", chain_mids: "", showshare: "0", averageRating: "",
-                    s3base: "https://s3.amazonaws.com/fs.goanimate.com/,https://assets.vyond.com/",
-                ratingCount: "", fb_app_url: "https://ga.vyond.com/", numContact: 0, isInitFromExternal: 1, storePath: "${params.flashvars.storePath}", clientThemePath: "${params.flashvars.clientThemePath}", animationPath: "${params.flashvars.animationPath}",
+        isWide: "1", presaveId: "${params.flashvars.presaveId}", page: "", 
+        apiserver: "/", ctc: "go", tlang: "en_US",
+        autostart: "1", appCode: "go", isEmbed: "1", 
+                storePath: "${params.flashvars.storePath}", clientThemePath: "${params.flashvars.clientThemePath}",
         startFrame: previewStartFrame
     });
     $('#previewPlayer').removeClass('using-h5');
