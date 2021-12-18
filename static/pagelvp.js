@@ -30,8 +30,7 @@ module.exports = function (req, res, url) {
 			};
 			params = {
 				flashvars: {
-                                        'apiserver': '/', 'storePath': process.env.STORE_URL + '/<store>', 'ut': 60,
-					'autostart': 0, 'isWide': 1, 'clientThemePath': process.env.CLIENT_URL + '/<client_theme>',
+                                        'movieId': '', 'animationPath': process.env.SWF_URL + '/', 
 				},
 
 				allowScriptAccess: 'always',
@@ -53,7 +52,7 @@ module.exports = function (req, res, url) {
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <link rel="dns-prefetch" href="//josephcrosmanplays532.github.io/">
 
-<title>Test - Joseph Animate 2021</title>
+<title>Your Animation - Joseph Animate 2021</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
