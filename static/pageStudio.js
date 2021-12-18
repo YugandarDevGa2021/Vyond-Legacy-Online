@@ -578,8 +578,19 @@ function loadLegacyPreview() {
     }
     pauseH5PreviewPlayer();
     savePreviewData(movieDataXmlStr);
-    document.getElementById('playerdiv').innerHTML = '<object data="${params.flashvars.animationPath}player.swf" type="application/x-shockwave-flash" id="Player" width="640" height="360"><param name="quality" value="high"/><param name="scale" value="exactfit"/><param name="allowScriptAccess" value="always"/><param name="allowFullScreen" value="true"/><param name="wmode" value="window"/><param name="flashvars" value="startFrame=previewStartFrame&apiserver=%2F&storePath=${params.flashvars.storePath}&ut=60&autostart=1&isWide=1&clientThemePath=${params.flashvars.clientThemePath}&movieId=${params.flashvars.presaveId}&bs=adam&presaveId=${params.flashvars.presaveId}&appCode=go&page=&siteId=go&m_mode=school&isLogin=Y&isEmbed=1&ctc=go&tlang=en_US&nextUrl=%2Fyourvideos%22%3E"/><param name="movie" value="${params.flashvars.animationPath}player.swf"/></object>';
-    }
+    createPreviewPlayer("playerdiv", {
+        height: 360,
+        width: 640,
+        player_url: "https://d3v4eglovri8yt.cloudfront.net/animation/66453a3ba2cc5e1b/player.swf",
+        quality: "high"
+    }, {
+        apiserver: "/", storePath: "${params.flashvars.storePath}", ut: "60", autostart: "1", isWide" "1", clientThemePath: "${params.flashvars.clientThemePath}",
+	movieId: "${params.flashvars.presaveId}", bs: "adam", presaveId: "${params.flashvars.presaveId}", appCode: "go", page: "", siteId: "go", m_mode: "school",
+	isLogin: "Y", isEmbed: "1", ctc: "go", tlang: "en_US", nextUrl: "/yourvideos",
+	startFrame: previewStartFrame
+    });
+    $('#previewPlayer').removeClass('using-h5');
+}
 function initPreviewPlayer(dataXmlStr, startFrame, containsChapter, themeList) {
     movieDataXmlStr = dataXmlStr;
     previewStartFrame = startFrame;
