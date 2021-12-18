@@ -584,10 +584,14 @@ function loadLegacyPreview() {
         player_url: "https://d3v4eglovri8yt.cloudfront.net/animation/66453a3ba2cc5e1b/player.swf",
         quality: "high"
     }, {
-        apiserver: "/", storePath: "${params.flashvars.storePath}", ut: "60", autostart: "1", isWide" "1", clientThemePath: "${params.flashvars.clientThemePath}",
-	movieId: "${params.flashvars.presaveId}", bs: "adam", presaveId: "${params.flashvars.presaveId}", appCode: "go", page: "", siteId: "go", m_mode: "school",
-	isLogin: "Y", isEmbed: "1", ctc: "go", tlang: "en_US", nextUrl: "/yourvideos",
-	startFrame: previewStartFrame
+        bs: "adam", nextUrl: "/yourvideos", movieId: "${params.flashvars.presaveId}", ut: "60",
+        isWide: "1", presaveId: "${params.flashvars.presaveId}", page: "", userId: "", username: "", uemail: "",
+        apiserver: "/", thumbnailURL: "", copyable: "0", isPublished: "0", ctc: "go", tlang: "en_US", is_private_shared: "0",
+        autostart: "1", appCode: "go", is_slideshow: "0", originalId: "0", is_emessage: "0", isEmbed: "0", refuser: "",
+        utm_source: "", uid: "", isTemplate: "1", showButtons: "0", chain_mids: "", showshare: "0", averageRating: "",
+                    s3base: "https://s3.amazonaws.com/fs.goanimate.com/,https://assets.vyond.com/",
+                ratingCount: "", fb_app_url: "https://ga.vyond.com/", numContact: 0, isInitFromExternal: 1, storePath: "https://d3v4eglovri8yt.cloudfront.net/store/3a981f5cb2739137/<store>", clientThemePath: "https://d3v4eglovri8yt.cloudfront.net/static/019b83797158fc0c/<client_theme>", animationPath: "https://d3v4eglovri8yt.cloudfront.net/animation/66453a3ba2cc5e1b/",
+        startFrame: previewStartFrame
     });
     $('#previewPlayer').removeClass('using-h5');
 }
