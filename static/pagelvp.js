@@ -30,7 +30,7 @@ module.exports = function (req, res, url) {
 			};
 			params = {
 				flashvars: {
-                                        'movieId': '', 'animationPath': process.env.SWF_URL + '/', 
+                                        'movieId': '', 'swfPath': process.env.SWF_URL + '/', 
 				},
 
 				allowScriptAccess: 'always',
@@ -840,7 +840,7 @@ Copyright (C) Joseph Animate 2021, <script>let date =  new Date().getFullYear();
 <input id="embed_code_field" type="hidden" value="<iframe scrolling=&quot;no&quot; allowTransparency=&quot;true&quot; allowfullscreen frameborder=&quot;0&quot; width=&quot;620&quot; height=&quot;350&quot; src=&quot;https://vyondlegacyofflical.herokuapp.com/player/embed/?movieId=${params.flashvars.movieId}&quot; ></iframe>
 "/>
 <script>
-    var flashPlayerUrl = '${params.flashvars.animationPath}player.swf',
+    var flashPlayerUrl = '${params.flashvars.swfPath}player.swf',
         flashPlayerVars = {"movieOwner":"USER+RETIRED","movieOwnerId":"0vPLkFi4Y7kw","movieId":"${params.flashvars.movieId}","movieLid":"0","movieTitle":"Your+Animation","userId":"","username":"","uemail":"","ut":"-1","numContact":"","apiserver":"\/","duration":"140","playcount":1,"thumbnailURL":"\/movie_thumbs\/${params.flashvars.movieId}.png","copyable":"0","isPublished":"1","ctc":"go","tlang":"en_US","is_private_shared":"0","autostart":"0","appCode":"go","is_slideshow":"0","originalId":"0zEt_fo4L-5k","is_emessage":"0","storePath":"https:\/\/josephcrosmanplays532.github.io\/store\/3a981f5cb2739137\/<store>","clientThemePath":"https:\/\/josephcrosmanplays532.github.io\/static\/55910a7cd204c37c\/<client_theme>","animationPath":"https:\/\/josephcrosmanplays532.github.io\/animation\/66453a3ba2cc5e1b\/","isEmbed":"0","refuser":null,"utm_source":null,"uid":null,"isTemplate":"0","showButtons":"1","chain_mids":"","averageRating":5,"ratingCount":"19","fb_app_url":"https:\/\/goanimate-wrapper-europe.herokuapp.com\/","ad":1,"endStyle":0,"isWide":"1","pwm":1,"s3base":"https:\/\/s3.amazonaws.com\/fs.goanimate.com\/,https:\/\/assets.vyond.com\/","initcb":"flashPlayerLoaded","showshare":false},
         h5PlayerElem = null,
         sceneDetails = {};
