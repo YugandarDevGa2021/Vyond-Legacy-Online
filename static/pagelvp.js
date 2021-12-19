@@ -57,9 +57,9 @@ module.exports = function (req, res, url) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="title" content="Test - Joseph Animate 2021">
 <meta name="description" content="Watch the video: Test by Joseph Animate 2021 on GoAnimate.">
-<link rel="canonical" href="https://vyond2018.herokuapp.com/videos/?movieId=m-16">
-<link rel="image_src" href="/pages/html/13801618.jpg">
-<link rel="video_src" href="https://josephcrosmanplays532.github.io/player/swf/m-16">
+<link rel="canonical" href="https://vyondlegacyoffical.herokuapp.com/videos/?movieId=${params.flashvars.movieId}">
+<link rel="image_src" href="/movie_thumbs/${params.flashvars.movieId}.png">
+<link rel="video_src" href="https://josephcrosmanplays532.github.io/playerFlash/${params.flashvars.movieId}.png">
 <meta name="video_height" content="354">
 <meta name="video_width" content="550">
 <meta name="video_type" content="application/x-shockwave-flash">
@@ -67,9 +67,9 @@ module.exports = function (req, res, url) {
 <meta property="og:type" content="article">
 <meta property="og:title" content="election">
 <meta property="og:description" content="">
-<meta property="og:url" content="https://vyond2018.herokuapp.com/videos/?movieId=m-16">
-<meta property="og:image" content="https://s3.amazonaws.com/fs.goanimate.com/files/thumbnails/movie/876/5682876/13801618L.jpg">
-<meta property="og:video" content="https://josephcrosmanplays532.github.io/player/swf/m-16">
+<meta property="og:url" content="https://vyondlegacyoffical.herokuapp.com/videos/?movieId=${params.flashvars.movieId}">
+<meta property="og:image" content="/movie_thumbs/${params.flashvars.movieId}.png">
+<meta property="og:video" content="https://josephcrosmanplays532.github.io/playerFlash/${params.flashvars.movieId}">
 <meta property="og:video:height" content="354">
 <meta property="og:video:width" content="550">
 <meta property="og:video:type" content="application/x-shockwave-flash">
@@ -79,7 +79,7 @@ module.exports = function (req, res, url) {
 <meta name="twitter:title" content="Test - Joseph Animate 2021">
 <meta name="twitter:description" content="Watch the video: Test by Joseph Animate 2021 on GoAnimate.">
 <meta name="twitter:image:src" content="https://s3.amazonaws.com/fs.goanimate.com/files/thumbnails/movie/876/5682876/13801618L.jpg">
-<meta name="twitter:player" content="https://josephcrosmanplays532.github.io/player/embed/m-16">
+<meta name="twitter:player" content="https://vyondlegacyoffical.herokuapp.com/player/embed/?movieId=${params.flashvars.movieId}">
 <meta name="twitter:player:height" content="349">
 <meta name="twitter:player:width" content="620">
 <meta property="og:site_name" content="GoAnimate">
