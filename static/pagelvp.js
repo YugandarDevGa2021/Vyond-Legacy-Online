@@ -33,6 +33,7 @@ module.exports = function (req, res, url) {
 				flashvars: {
                                         'apiserver': '/', 'storePath': process.env.STORE_URL + '/<store>', 'ut': 60,
 					'autostart': 0, 'isWide': 1, 'clientThemePath': process.env.CLIENT_URL + '/<client_theme>',
+					'animationPath': process.env.SWF_URL + '/',
 				},
 
 				allowScriptAccess: 'always',
