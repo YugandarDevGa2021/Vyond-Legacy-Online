@@ -342,7 +342,7 @@ if (self !== top) {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                   </button>
-                  <a class="navbar-brand" href="http://localhost:4343/pages/html/ga.vyond.com/yourvideos.html" title="Vyond">
+                  <a class="navbar-brand" href="/yourvideos" title="Vyond">
                       <img alt="Vyond" src="/pages/html/logo.png">
                   </a>
             </div>
@@ -358,8 +358,8 @@ if (self !== top) {
     </ul>
 </li>
                     <li>
-                        <a class="hidden-sm hidden-md hidden-lg" href="http://localhost:4343/pages/html/ga.vyond.com/videomaker.html">Make a Video</a>
-                        <span class="site-nav-btn hidden-xs"><a class="btn btn-orange" href="http://localhost:4343/pages/html/ga.vyond.com/videomaker.html">Make a Video</a></span>
+                        <a class="hidden-sm hidden-md hidden-lg" href="/videomaker">Make a Video</a>
+                        <span class="site-nav-btn hidden-xs"><a class="btn btn-orange" href="/videomaker">Make a Video</a></span>
                     </li>
 <li class="dropdown">
     <a class="dropdown-toggle" href="https://ga.vyond.com/account?_ga=2.15274102.1991779285.1608744997-274477995.1607549653" data-toggle="dropdown" aria-expanded="false">
@@ -394,7 +394,7 @@ if (self !== top) {
                 <div class="status-container">
                     <div class="vthumb-container">
                         <div class="vthumb">
-                            <div class="vthumb-clip"><div class="vthumb-clip-inner"><span class="valign"></span><img src="/pages/html/13801618.jpg" alt="election"></div></div>
+                            <div class="vthumb-clip"><div class="vthumb-clip-inner"><span class="valign"></span><img src="/movie_thumbs/${params.flashvars.movieId}.png" alt="election"></div></div>
                         </div>
                     </div>
                     <div class="status draft">
