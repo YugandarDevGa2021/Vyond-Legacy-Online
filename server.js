@@ -12,6 +12,7 @@ const asu = require('./asset/upload');
 const stl = require('./static/load');
 const stp = require('./static/page');
 const sto = require('./static/pageStudio');
+const sas = require('./static/pageAjaxShare');
 const sti = require('./static/pagelvmold');
 const sco = require('./static/pageOld');
 const stt = require('./static/pageTutorial');
@@ -61,6 +62,7 @@ const functions = [
 	stl,
 	sti,
 	sco,
+	sas,
 	stt,
 ];
 
