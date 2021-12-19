@@ -57,7 +57,7 @@ module.exports = function (req, res, url) {
                 <div class="col-md-6">
                                         <div class="input-group">
                         <span class="input-group-addon">&lt;/&gt;</span>
-                        <input class="form-control gtm-ga-event" type="text" value="<iframe scrolling=&quot;no&quot; allowTransparency=&quot;true&quot; allowfullscreen frameborder=&quot;0&quot; width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://vyondlegacyoffical.herokuapp.com/player/embed/?movieId=${params.flashvars.movieId}utm_source=social&amp;utm_medium=tumblr&amp;utm_campaign=usercontent&quot; ></iframe>
+                        <input class="form-control gtm-ga-event" type="text" value="<iframe scrolling=&quot;no&quot; allowTransparency=&quot;true&quot; allowfullscreen frameborder=&quot;0&quot; width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://vyondlegacyoffical.herokuapp.com/player/embed/?movieId=${params.flashvars.video}utm_source=social&amp;utm_medium=tumblr&amp;utm_campaign=usercontent&quot; ></iframe>
 " data-gtmv-action="Embed - Click text field" data-gtmv-category="" data-gtmv-label="13529187 - Guest" onclick="amplitudeTrackShare(AMPLITUDE_EVENT_PROPERTIES.SHARE_EMBED); this.focus();this.select()">
                     </div>
                                     </div>
@@ -73,7 +73,7 @@ module.exports = function (req, res, url) {
                 <div class="col-md-6">
                     <div class="input-group">
                         <span class="input-group-addon">URL</span>
-                        <input class="form-control gtm-ga-event" type="text" value="https://vyondlegacyoffical.herokuapp.com/player/embed/?movieId=${params.flashvars.movieId}utm_source=linkshare&amp;utm_medium=linkshare&amp;utm_campaign=usercontent" data-gtmv-action="Share - Click text field" data-gtmv-category="" data-gtmv-label="13529187 - Guest" onclick="amplitudeTrackShare(AMPLITUDE_EVENT_PROPERTIES.SHARE_LINK_SHARE); this.focus(); this.select()">
+                        <input class="form-control gtm-ga-event" type="text" value="https://vyondlegacyoffical.herokuapp.com/player/embed/?movieId=${params.flashvars.video}utm_source=linkshare&amp;utm_medium=linkshare&amp;utm_campaign=usercontent" data-gtmv-action="Share - Click text field" data-gtmv-category="" data-gtmv-label="13529187 - Guest" onclick="amplitudeTrackShare(AMPLITUDE_EVENT_PROPERTIES.SHARE_LINK_SHARE); this.focus(); this.select()">
                     </div>
                 </div>
             </div>
