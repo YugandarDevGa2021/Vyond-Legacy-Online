@@ -460,6 +460,7 @@ function processVoice(voiceName, text) {
 				);
 				break;
 			}
+			// you need to upload a voice in the uploadVoice.php file located in https://action-ouranimate.herokuapp.com/uploadVoice.php in order for this to work.
 			case "import": {
 				var q = qs.encode({
 					voice: voice.arg,
@@ -467,9 +468,8 @@ function processVoice(voiceName, text) {
 				});
 				http.get(
 					{
-						host: "localhost",
-						port: "4334",
-						path: `/rewritable.mp3`,
+						host: "action-ouranimate.herokuapp.com",
+						path: `/voiceUploads/rewritable.mp3`,
 					},
 					(r) => {
 						var buffers = [];
