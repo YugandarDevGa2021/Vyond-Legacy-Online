@@ -30,7 +30,7 @@ module.exports = function (req, res, url) {
 			};
 			params = {
 				flashvars: {
-					'movieId': '', 
+					'video': '', 
 				},
 			};
 			break;
