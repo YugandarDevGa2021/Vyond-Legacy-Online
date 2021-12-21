@@ -10,6 +10,7 @@ const chs = require('./character/save');
 const mvu = require('./movie/upload');
 const asu = require('./asset/upload');
 const sts = require('./starter/save');
+const srl = require('./starter/load');
 const stl = require('./static/load');
 const stp = require('./static/page');
 const sto = require('./static/pageStudio');
@@ -66,6 +67,7 @@ const functions = [
 	sas,
 	stt,
 	sts,
+	srl,
 ];
 
 module.exports = http.createServer((req, res) => {
