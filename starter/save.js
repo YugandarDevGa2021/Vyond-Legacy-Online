@@ -6,12 +6,12 @@ module.exports = function (req, res, url) {
 	loadPost(req, res).then(data => {
 
 		const trigAutosave = data.is_triggered_by_autosave;
-		if (trigAutosave && (!data.starterId || data.noAutosave))
+		if (trigAutosave && (!data.movieId || data.noAutosave))
 			return res.end('0');
 
 		var body = Buffer.from(data.body_zip, 'base64');
 		var thumb = data.thumbnail_large && Buffer.from(data.thumbnail_large, 'base64');
-		starter.save(body, thumb, data.starterId || data.presaveId, data.presaveId).then(nId => res.end('0' + nId));
+		movie.save(body, thumb, data.movieId || data.presaveId, data.presaveId).then(nId => res.end('0' + nId));
 	});
 	return true;
 }
