@@ -13,7 +13,7 @@ module.exports = {
 	 * @param {string} oldId
 	 * @returns {Promise<string>}
 	 */
-	save(movieZip, thumb, oldId, nëwId = oldId) {
+	save(starterZip, thumb, oldId, nëwId = oldId) {
 		if (thumb && nëwId.startsWith('m-')) {
 			const n = Number.parseInt(nëwId.substr(2));
 			const thumbFile = fUtil.getFileIndex('thumb-', '.png', n);
@@ -57,7 +57,7 @@ module.exports = {
 				case 'm': {
 					let numId = Number.parseInt(suffix);
 					if (isNaN(numId)) rej();
-					let filePath = fUtil.getFileIndex('movie-', '.xml', numId);
+					let filePath = fUtil.getFileIndex('starter-', '.xml', numId);
 					if (!fs.existsSync(filePath)) rej();
 
 					const buffer = fs.readFileSync(filePath);
@@ -68,14 +68,14 @@ module.exports = {
 			}
 		});
 	},
-	loadXml(movieId) {
+	loadXml(starterId) {
 		return new Promise((res, rej) => {
-			const i = movieId.indexOf('-');
-			const prefix = movieId.substr(0, i);
-			const suffix = movieId.substr(i + 1);
+			const i = starterId.indexOf('-');
+			const prefix = starterId.substr(0, i);
+			const suffix = starterId.substr(i + 1);
 			switch (prefix) {
-				case 'm': {
-					const fn = fUtil.getFileIndex('movie-', '.xml', suffix);
+				case 's': {
+					const fn = fUtil.getFileIndex('starter-', '.xml', suffix);
 					fs.existsSync(fn) ? res(fs.readFileSync(fn)) : rej();
 					break;
 				}
@@ -90,10 +90,10 @@ module.exports = {
 			}
 		});
 	},
-	thumb(movieId) {
+	thumb(starterId) {
 		return new Promise((res, rej) => {
-			if (!movieId.startsWith('m-')) return;
-			const n = Number.parseInt(movieId.substr(2));
+			if (!starterId.startsWith('m-')) return;
+			const n = Number.parseInt(starterId.substr(2));
 			const fn = fUtil.getFileIndex('thumb-', '.png', n);
 			isNaN(n) ? rej() : res(fs.readFileSync(fn));
 		});
@@ -102,16 +102,16 @@ module.exports = {
 		const array = [];
 		const last = fUtil.getLastFileIndex('movie-', '.xml');
 		for (let c = last; c >= 0; c--) {
-			const movie = fs.existsSync(fUtil.getFileIndex('movie-', '.xml', c));
+			const starter = fs.existsSync(fUtil.getFileIndex('starter-', '.xml', c));
 			const thumb = fs.existsSync(fUtil.getFileIndex('thumb-', '.png', c));
-			if (movie && thumb) array.push(`m-${c}`);
+			if (starter && thumb) array.push(`m-${c}`);
 		}
 		return array;
 	},
-	async meta(movieId) {
-		if (!movieId.startsWith('m-')) return;
-		const n = Number.parseInt(movieId.substr(2));
-		const fn = fUtil.getFileIndex('movie-', '.xml', n);
+	async meta(starterId) {
+		if (!starterId.startsWith('s-')) return;
+		const n = Number.parseInt(starterId.substr(2));
+		const fn = fUtil.getFileIndex('starter-', '.xml', n);
 
 		const fd = fs.openSync(fn, 'r');
 		const buffer = Buffer.alloc(256);
@@ -120,21 +120,10 @@ module.exports = {
 		const endTitle = buffer.indexOf(']]></title>');
 		const title = buffer.slice(begTitle, endTitle).toString().trim().replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
-		const begDuration = buffer.indexOf('duration="') + 10;
-		const endDuration = buffer.indexOf('"', begDuration);
-		const duration = Number.parseFloat(
-			buffer.slice(begDuration, endDuration));
-		const min = ('' + ~~(duration / 60)).padStart(2, '0');
-		const sec = ('' + ~~(duration % 60)).padStart(2, '0');
-		const durationStr = `${min}:${sec}`;
-
 		fs.closeSync(fd);
 		return {
-			date: fs.statSync(fn).mtime,
-			durationString: durationStr,
-			duration: duration,
 			title: title,
-			id: movieId,
+			id: starterId,
 		};
 	},
 }
